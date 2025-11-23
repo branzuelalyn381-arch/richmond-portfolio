@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richmond Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+
+<body>
+
+    <nav>
+        <button class="active" onclick="scrollToSec('home')">Home</button>
+        <button onclick="scrollToSec('about')">About</button>
+        <button onclick="scrollToSec('love')">What I Love</button>
+        <button onclick="scrollToSec('contact')">Contact</button>
+    </nav>
+
+    <div class="container">
+
+        <div class="left">
+
+            <div class="card" id="home">
+                <h1>Richmond Baisac</h1>
+                <p class="role">Student • Creative • Learner</p>
+
+                <div class="pills">
+                    <div class="pill">📍Cebu Technological University Tabuelan</div>
+
+                </div>
+            </div>
+
+            <div class="card" id="about">
+                <h2>About Me</h2>
+                <p style="margin-top:10px; color:var(--muted)">
+                   Hello, I’m Richmond Baisac. I’m the type of guy who likes chill days, good music, and anything that keeps me productive. I enjoy exploring new things, whether it’s school tasks, small projects, or hobbies.I believe in working hard quietly and letting results speak for themselves.
+                </p>
+            </div>
+
+            <div class="card" id="love">
+                <h2>What I Love</h2>
+
+                <ul style="margin-top:10px; color:var(--muted)">
+                    <li>• Drawing & digital art</li>
+                    <li>• Listening to music</li>
+                    <li>• Playing Basketball</li>
+                    <li>• Learning new skills</li>
+                </ul>
+            </div>
+
+            <div class="card" id="contact">
+                <h2>Contact</h2>
+                <p style="margin-top:10px; color:var(--muted)">
+                    Feel free to message me anytime.
+                </p>
+
+                <div class="contact" style="margin-top:10px">
+                    <a href="mailto:richmond@example.com">richmondbaisac@gmail.com</a>
+                    <a href="#">09xxx-xxx-xxx</a>
+                </div>
+
+                <p style="margin-top:12px; color:var(--muted); font-size:13px">
+                    © Richmond — Portfolio
+                </p>
+            </div>
+
+        </div>
+
+        <div class="right">
+          <div class="avatar">
+            <img src="image.jpg" alt="Profile">
+        </div>
+
+
+            <h2>Hello, I'm Richmond</h2>
+            <p style="color:var(--muted); margin-top:5px">
+                BSIT Student 
+            </p>
+
+            <div class="contact" style="margin-top:12px">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function scrollToSec(id) {
+            document.getElementById(id).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+            document.querySelectorAll("nav button").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            event.target.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
